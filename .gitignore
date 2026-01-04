@@ -1,0 +1,121 @@
+# ----------------------------
+# C++ generic build artifacts
+# ----------------------------
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.i
+*.ii
+*.s
+*.d
+*.pch
+*.gch
+*.pdb
+*.idb
+*.ilk
+
+# ----------------------------
+# Build directories (common)
+# ----------------------------
+build/
+build-*/
+cmake-build-*/
+out/
+bin/
+obj/
+dist/
+Debug/
+Release/
+x64/
+x86/
+
+# ----------------------------
+# CMake
+# ----------------------------
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+install_manifest.txt
+
+# ----------------------------
+# GNU Make / Ninja / other
+# ----------------------------
+*.ninja
+.ninja_deps
+.ninja_log
+*.make
+*.mk
+
+# ----------------------------
+# Clang / GCC tooling
+# ----------------------------
+.cache/
+*.gcno
+*.gcda
+*.gcov
+*.profraw
+*.profdata
+*.opendb
+*.plist
+
+# ----------------------------
+# Sanitizers / core dumps
+# ----------------------------
+core
+core.*
+vgcore.*
+
+# ----------------------------
+# IDE: Visual Studio / VS Code
+# ----------------------------
+.vs/
+.vscode/
+*.code-workspace
+
+# ----------------------------
+# IDE: CLion / JetBrains
+# ----------------------------
+.idea/
+
+# ----------------------------
+# IDE: Xcode
+# ----------------------------
+*.xcworkspace/
+*.xcuserstate
+xcuserdata/
+DerivedData/
+
+# ----------------------------
+# OS junk
+# ----------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ----------------------------
+# Logs
+# ----------------------------
+*.log
+
+# ----------------------------
+# Optional: local env files
+# ----------------------------
+.env
+.env.*
