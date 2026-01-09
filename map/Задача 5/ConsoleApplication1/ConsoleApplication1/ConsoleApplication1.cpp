@@ -1,52 +1,41 @@
-﻿#include <map>
+﻿//https://codeforces.com/problemset/problem/499/B
+
+#include <map>
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
 int main(){
-	
-	
-	map<int, vector<string>>lap{
-		{1,vector<string>{}},
-		{2,vector<string>{}},
-		{3,vector<string>{}},
-		{4,vector<string>{}}
-	};
+	map<string,string>lap;
 
 
 	int n, m; //Кол во слов в лекции, кол во слов из языков
 	cin >> n >> m;
+	vector<string>wordslap;
 	
 	
 	for (int i = 0; i < m; i++) {
 		string word1, word2;
 		cin >> word1 >> word2;
-		lap[1].push_back(word1);
-		lap[2].push_back(word2);
+
+		if (word1.length() <= word2.length()) {
+			lap[word1] = word1;
+		}
+		else {
+			lap[word1] = word2;
+		}
 	}
 
 
 	for (int i = 0; i < n; i++) {
 		string word;
 		cin >> word;
-		lap[3].push_back(word);
+		wordslap.push_back(word);
 	}
+	
 
-	for (int q = 0; q < lap[3].size(); q++) {
-		for (int l = 0; l < lap[1].size(); l++) {
-			if (lap[3][q] == lap[1][l]) {
-				if (lap[1][l].length() <= lap[2][l].length()) {
-					lap[4].push_back(lap[1][l]);
-				}
-				else {
-					lap[4].push_back(lap[2][l]);
-				}
-			}
-		}
+	for (int q = 0; q < wordslap.size(); q++) {
+		cout << lap[wordslap[q]] << " ";
 	}
-	for (int i = 0; i < lap[4].size(); i++) {
-		cout << lap[4][i] << " ";
-	}
-
 }
